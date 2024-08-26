@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "dist-types",
+    "rootDir": "."
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "extends": "@backstage/cli/config/tsconfig.json",
+  "include": [
+    "src"
+  ]
+}
