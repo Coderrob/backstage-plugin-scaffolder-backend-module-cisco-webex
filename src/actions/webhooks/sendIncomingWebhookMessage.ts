@@ -20,7 +20,7 @@ export function createSendIncomingWebhookMessageAction({
     message: string
     webhooks?: string[]
   }>({
-    id: 'webex:webhook:sendMessage',
+    id: 'webex:webhooks:incoming:sendMessage',
     description: 'Sends a message using Webex Incoming Webhooks',
     schema: {
       input: z.object({
@@ -41,7 +41,9 @@ export function createSendIncomingWebhookMessageAction({
     },
     async handler(ctx) {
       const webhooks: string[] =
-        config.getOptionalStringArray('webex.webhooks') ?? ctx.input.webhooks
+        config.getOptionalStringArray('webex.webhooks.incoming') ||
+        ctx.input.webhooks ||
+        []
 
       if (webhooks?.length <= 0) {
         throw new InputError(
