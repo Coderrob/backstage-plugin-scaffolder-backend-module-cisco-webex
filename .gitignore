@@ -1,0 +1,5 @@
+# Node baggage
+node_modules
+
+# Support local config
+app-config.local.yaml
