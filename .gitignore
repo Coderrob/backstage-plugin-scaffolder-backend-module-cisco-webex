@@ -1,5 +1,11 @@
 # Node baggage
-node_modules
+/node_modules/
+/dist/
+/dist-types/
 
 # Support local config
 app-config.local.yaml
+
+# VS Code files
+.vscode/settings.json
+

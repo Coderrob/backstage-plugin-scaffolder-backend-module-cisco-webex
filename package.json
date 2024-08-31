@@ -1,9 +1,9 @@
 {
-  "name": "backstage-plugin-scaffolder-backend-module-webex",
+  "name": "@coderrob/backstage-plugin-scaffolder-backend-module-webex",
   "version": "1.0.0",
-  "description": "The Webex Teams module for  @backstage/plugin-scaffolder-backend",
+  "description": "The Webex Incoming Webhooks messaging module for @backstage/plugin-scaffolder-backend",
   "repository": "https://github.com/Coderrob/backstage-plugin-scaffolder-backend-module-webex.git",
-  "author": "coderrob <rob@coderrob.com>",
+  "author": "Robert Lindley <rob@coderrob.com>",
   "license": "Apache-2.0",
   "private": false,
   "main": "src/index.ts",
@@ -17,14 +17,14 @@
     "role": "backend-plugin-module"
   },
   "scripts": {
-    "start": "backstage-cli package start",
     "build": "yarn install --omit=optional && yarn tsc && backstage-cli package build",
+    "clean": "backstage-cli package clean",
     "lint": "backstage-cli package lint",
     "lint:fix": "yarn prettier . --write",
-    "test": "backstage-cli package test",
-    "clean": "backstage-cli package clean",
+    "postpack": "backstage-cli package postmark",
     "prepack": "backstage-cli package prepack",
-    "postpack": "backstage-cli package postpack"
+    "start": "backstage-cli package start",
+    "test": "backstage-cli package test"
   },
   "dependencies": {
     "@backstage/plugin-scaffolder-node": "^0.4.9",

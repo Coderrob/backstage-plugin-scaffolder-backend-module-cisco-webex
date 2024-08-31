@@ -5,4 +5,7 @@
  * @packageDocumentation
  */
 
-export * from './actions';
+export {
+  webexWebhookScaffolderModule,
+  createSendWebhooksMessageAction,
+} from './actions';
