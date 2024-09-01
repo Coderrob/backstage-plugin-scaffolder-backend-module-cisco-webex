@@ -1,5 +1,12 @@
 # @coderrob/plugin-scaffolder-backend-module-webex
 
+## 1.0.3
+
+### Patch Changes
+
+- Fix redundant import on axios inside unit test.
+- Add NPM deployment configuration files and registry path.
+
 ## 1.0.2
 
 ### Patch Changes
