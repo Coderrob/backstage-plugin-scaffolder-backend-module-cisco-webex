@@ -1,11 +1,10 @@
+import { webexWebhookScaffolderModule } from './actions';
+
 /***/
 /**
  * The scaffolder module for @backstage/plugin-scaffolder-backend.
  *
  * @packageDocumentation
  */
-
-export {
-  webexWebhookScaffolderModule,
-  createSendWebhooksMessageAction,
-} from './actions';
+export { createSendWebhooksMessageAction } from './actions';
+export { webexWebhookScaffolderModule as default };
