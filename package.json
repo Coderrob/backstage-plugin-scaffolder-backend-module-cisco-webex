@@ -1,6 +1,6 @@
 {
   "name": "@coderrob/backstage-plugin-scaffolder-backend-module-webex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Webex Incoming Webhooks messaging module for @backstage/plugin-scaffolder-backend",
   "repository": {
     "type": "git",
