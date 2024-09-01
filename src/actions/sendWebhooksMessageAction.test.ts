@@ -1,5 +1,4 @@
-import axios from 'axios';
-import { HttpStatusCode } from 'axios';
+import axios, { HttpStatusCode } from 'axios';
 import { createMockActionContext } from '@backstage/plugin-scaffolder-node-test-utils';
 import { createSendWebhooksMessageAction } from './sendWebhooksMessageAction';
 
