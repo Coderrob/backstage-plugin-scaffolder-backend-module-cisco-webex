@@ -30,7 +30,9 @@ To add the Webex Incoming Webhooks module to your Backstage project, follow thes
    ```typescript
    const backend = createBackend();
    backend.add(import('@backstage/plugin-scaffolder-backend/alpha'));
-   backend.add(import('@coderrob/backstage-plugin-scaffolder-backend-module-webex'));
+   backend.add(
+     import('@coderrob/backstage-plugin-scaffolder-backend-module-webex')
+   );
    ```
 
    This code snippet registers the `createSendWebhooksMessageAction` with the Scaffolder backend using the latest Backstage.io backend framework.
@@ -43,7 +45,7 @@ To add the Webex Incoming Webhooks module to your Backstage project, follow thes
 
    ```yaml
    spec:
-     . . . 
+     . . .
      steps:
        - id: send-webex-message
          name: Send Webex Message
@@ -51,7 +53,7 @@ To add the Webex Incoming Webhooks module to your Backstage project, follow thes
          input:
            format: "markdown"
            message: "# This Could Be Us"
-           webhooks: 
+           webhooks:
              - "https://webexapis.com/v1/webhooks/incoming/<SPACE_ID>"
              - "https://webexapis.com/v1/webhooks/incoming/<SPACE_ID>" # optional ability to message multiple spaces
    ```
