@@ -1,6 +1,10 @@
 # Ignore artifacts
 dist
+dist-types
 coverage
 
 # Ignore dependencies
 node_modules
+
+# Ignore VS Code
+.vscode
