@@ -1,16 +1,43 @@
 {
-  "name": "@coderrob/backstage-plugin-scaffolder-backend-module-webex",
-  "version": "1.0.1",
-  "description": "The Webex Incoming Webhooks messaging module for @backstage/plugin-scaffolder-backend",
-  "repository": {
-    "type": "git",
-    "directory": "."
-  },
   "author": "Robert Lindley <rob@coderrob.com> (https://coderrob.com)",
-  "license": "Apache-2.0",
-  "private": false,
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "backstage": {
+    "pluginId": "scaffolder",
+    "pluginPackage": "@backstage/plugin-scaffolder-backend",
+    "role": "backend-plugin-module"
+  },
+  "dependencies": {
+    "@backstage/backend-plugin-api": "^0.8.1",
+    "@backstage/errors": "^1.2.4",
+    "@backstage/plugin-scaffolder-node": "^0.4.9",
+    "axios": "^1.7.5",
+    "zod": "^3.23.8"
+  },
+  "description": "A Webex scaffolding module for @backstage/plugin-scaffolder-backend",
+  "devDependencies": {
+    "@backstage/backend-common": "^0.24.0",
+    "@backstage/cli": "^0.27.0",
+    "@backstage/plugin-scaffolder-node-test-utils": "^0.1.11",
+    "@spotify/prettier-config": "^12.0.0",
+    "@types/jest": "29.5.12",
+    "jest": "^29.7.0",
+    "node-gyp": "^10.0.0",
+    "prettier": "^2.3.2",
+    "typescript": "~5.4.0"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "!**/*.json",
+    "!**/*.test.*",
+    "!**/*.tsbuildinfo",
+    "!yarn.lock",
+    "catalog-info.yaml",
+    "CHANGELOG.md",
+    "README.md"
+  ],
   "keywords": [
     "backstage",
     "cisco",
@@ -18,15 +45,26 @@
     "scaffolder",
     "webex"
   ],
-  "publishConfig": {
-    "access": "public",
-    "main": "dist/index.cjs.js",
-    "types": "dist/index.d.ts"
+  "license": "Apache-2.0",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
   },
-  "backstage": {
-    "role": "backend-plugin-module",
-    "pluginId": "scaffolder",
-    "pluginPackage": "@backstage/plugin-scaffolder-backend"
+  "main": "src/index.ts",
+  "name": "@coderrob/backstage-plugin-scaffolder-backend-module-webex",
+  "prettier": "@spotify/prettier-config",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": ".",
+    "type": "git"
   },
   "scripts": {
     "build": "backstage-cli package build",
@@ -41,40 +79,6 @@
     "tsc": "tsc",
     "tsc:full": "tsc --skipLibCheck false --incremental false"
   },
-  "dependencies": {
-    "@backstage/backend-plugin-api": "^0.8.1",
-    "@backstage/errors": "^1.2.4",
-    "@backstage/plugin-scaffolder-node": "^0.4.9",
-    "zod": "^3.23.8",
-    "axios": "^1.7.5"
-  },
-  "devDependencies": {
-    "@backstage/backend-common": "^0.24.0",
-    "@backstage/cli": "^0.27.0",
-    "@backstage/plugin-scaffolder-node-test-utils": "^0.1.11",
-    "@spotify/prettier-config": "^12.0.0",
-    "@types/jest": "29.5.12",
-    "jest": "^29.7.0",
-    "node-gyp": "^10.0.0",
-    "prettier": "^2.3.2",
-    "typescript": "~5.4.0"
-  },
-  "prettier": "@spotify/prettier-config",
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,mjs,cjs}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,md}": [
-      "prettier --write"
-    ]
-  },
-  "files": [
-    "dist",
-    "!**/*.json",
-    "!**/*.test.*",
-    "!**/*.tsbuildinfo",
-    "!yarn.lock",
-    "README.md"
-  ]
+  "types": "src/index.ts",
+  "version": "1.0.2"
 }

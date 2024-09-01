@@ -1,0 +1,28 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-plugin-scaffolder-backend-module-webex
+  title: '@coderrob/backstage-plugin-scaffolder-backend-module-webex'
+  description: >-
+    A Webex scaffolding module for the Backstage plugin scaffolder backend.
+spec:
+  lifecycle: experimental
+  type: backstage-backend-plugin-module
+  owner: user:default/coderrob
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: coderrob
+  namespace: default
+  title: Robert Lindley
+  description: >-
+    Robert Lindley is a programmer, Pluralsight author, software architect,
+    emerging technologist, and lifelong learner.
+spec:
+  profile:
+    displayName: Robert Lindley
+    email: rob@coderrob.com
+    picture: https://coderrob.com/img/coderrob.jpg
+  memberOf: []
