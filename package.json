@@ -60,7 +60,8 @@
   "prettier": "@spotify/prettier-config",
   "private": false,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "directory": ".",
