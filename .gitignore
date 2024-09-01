@@ -9,3 +9,5 @@ app-config.local.yaml
 # VS Code files
 .vscode/settings.json
 
+# TS build metadata
+*.tsbuildinfo
