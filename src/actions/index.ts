@@ -1,1 +1,1 @@
-export * from './webhooks';
+export { createSendWebhooksMessageAction } from './sendWebhooksMessageAction';

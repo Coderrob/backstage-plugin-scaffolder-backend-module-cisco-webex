@@ -2,7 +2,7 @@
 
 <a href="https://www.buymeacoffee.com/coderrob" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-white.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 200px !important;" ></a>
 
-The Webex Incoming Webhooks messaging module for [@backstage/plugin-scaffolder-backend](https://www.npmjs.com/package/@backstage/plugin-scaffolder-backend). This Backstage.io module contains actions for sending messages using Webex Incoming Webhooks.
+The Webex scaffolding module for [@backstage/plugin-scaffolder-backend](https://www.npmjs.com/package/@backstage/plugin-scaffolder-backend). This Backstage.io module contains actions for sending messages using Webex Incoming Webhooks.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ The Webex Incoming Webhooks messaging module for [@backstage/plugin-scaffolder-b
 
 ## Getting Started
 
-To add the Webex Incoming Webhooks module to your Backstage project, follow these steps:
+To add the Webex scaffolding module to your Backstage project, follow these steps:
 
 1. **Install the module:**
 
@@ -23,16 +23,14 @@ To add the Webex Incoming Webhooks module to your Backstage project, follow thes
 
 1. **Register the custom action:**
 
-   After installing the module, you'll need to register the Webex Incoming Webhooks action in your Scaffolder backend.
+   After installing the module, you'll need to register the Webex scaffolding module in your Scaffolder backend.
 
    Open your `packages/backend/src/plugins/scaffolder.ts` file and [register the custom action](https://backstage.io/docs/features/software-templates/writing-custom-actions/#registering-custom-actions) as follows:
 
    ```typescript
    const backend = createBackend();
    backend.add(import('@backstage/plugin-scaffolder-backend/alpha'));
-   backend.add(
-     import('@coderrob/backstage-plugin-scaffolder-backend-module-webex')
-   );
+   backend.add(import('@coderrob/backstage-plugin-scaffolder-backend-module-webex'));
    ```
 
    This code snippet registers the `createSendWebhooksMessageAction` with the Scaffolder backend using the latest Backstage.io backend framework.

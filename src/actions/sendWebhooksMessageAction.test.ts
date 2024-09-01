@@ -51,12 +51,12 @@ describe('createSendWebhooksMessageAction', () => {
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       1,
       'https://webhook.url/1',
-      { text: 'Test message' }
+      { text: 'Test message' },
     );
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       2,
       'https://webhook.url/2',
-      { text: 'Test message' }
+      { text: 'Test message' },
     );
     expect(contextMock.output).toHaveBeenCalledTimes(0);
   });
@@ -73,7 +73,7 @@ describe('createSendWebhooksMessageAction', () => {
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       1,
       'https://webhook.url/1',
-      { markdown: '# Test message' }
+      { markdown: '# Test message' },
     );
     expect(contextMock.output).toHaveBeenCalledTimes(0);
   });
@@ -118,7 +118,7 @@ describe('createSendWebhooksMessageAction', () => {
     expect(mockedAxios.post).not.toHaveBeenCalled();
     expect(contextMissingWebhooks.output).toHaveBeenCalledWith(
       'failedMessages',
-      []
+      [],
     );
   });
 });
