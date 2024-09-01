@@ -32,6 +32,7 @@
     "@backstage/plugin-scaffolder-node-test-utils": "^0.1.11",
     "@backstage/config": "^1.2.0",
     "@backstage/errors": "^1.2.4",
+    "typescript": "^5.0.0",
     "zod": "^3.23.8",
     "axios": "^1.7.5"
   },
