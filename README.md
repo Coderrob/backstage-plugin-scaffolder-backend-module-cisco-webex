@@ -7,7 +7,7 @@ The Webex scaffolding module for [@backstage/plugin-scaffolder-backend](https://
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/en/download) must be installed in the environment.
-- You must have a [Webex Incoming Webhook](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://apphub.webex.com/applications/incoming-webhooks-cisco-systems-38054-23307-75252) URL available to send messages.
+- You must have a [Webex Incoming Webhook](https://apphub.webex.com/applications/incoming-webhooks-cisco-systems-38054-23307-75252) URL available to send messages.
 
 ## Getting Started
 
